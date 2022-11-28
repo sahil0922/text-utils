@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Navbar = (props) => {
   return (
     <nav className={`navbar navbar-expand-lg bg-${props.mode}`}>
-      <div className="container-fluid">
+      <div className="container-fluid nav-link active">
         {/* <a className="navbar-brand" href="/"> {props.title} </a> */}
         {props.title}
         <button
@@ -20,11 +20,11 @@ const Navbar = (props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0" >
-            <li className="nav-item">
+            <li className="nav-item nav-link active">
               {/* <a className="nav-link active" aria-current="page" href="/"> Home </a> */}
               Home
             </li>
-            <li className="nav-item">
+            <li className="nav-item nav-link active">
               {/* <a className="nav-link" href="/"> {props.about}</a> */}
               {props.about}
             </li>
