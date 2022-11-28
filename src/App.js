@@ -23,12 +23,12 @@ function App() {
       <Router>
         <Routes>
       {/* NavBar components */}
-        <Route exact path ="/" element = {<Navbar title="Text-Util" about="About" mode={mode} toggleMode={toggleMode} />} />
+        <Route path ="/" element = {<Navbar title="Text-Util" about="About" mode={mode} toggleMode={toggleMode} />} />
 
         <div className="container my-3">
           
-            <Route exact path="/about" element = {<About />} />
-            <Route exact path="/" element= {<FormText heading="Enter the text to Analyze below" mode={mode} />} />
+            <Route path="/about" element = {<About />} />
+            <Route path="/" element= {<FormText heading="Enter the text to Analyze below" mode={mode} />} />
         </div>
 
         </Routes>
