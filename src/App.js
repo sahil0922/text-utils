@@ -2,8 +2,8 @@ import "./App.css";
 import { useState } from "react";
 import FormText from "./components/FormText";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import About from "./components/About";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import About from "./components/About";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -20,9 +20,10 @@ function App() {
   };
   return (
     <>
-      <Router>
+      {/* getting bug while deploying on github pages so doing only one page app */}
+      {/* <Router> 
         <Routes>
-      {/* NavBar components */}
+      NavBar components
         <Route path ="/" element = {<Navbar title="Text-Util" about="About" mode={mode} toggleMode={toggleMode} />} />
 
         <div className="container my-3">
@@ -32,7 +33,11 @@ function App() {
         </div>
 
         </Routes>
-      </Router>
+      </Router> */}
+
+     <Navbar title="Text-Util" about="About" mode={mode} toggleMode={toggleMode} />
+     <FormText heading="Enter the text to Analyze below" mode={mode} />
+
     </>
   );
 }
