@@ -21,16 +21,17 @@ function App() {
   return (
     <>
       <Router>
-      {/* NavBar components */}
-      <Navbar title="Text-Util" about="About" mode={mode} toggleMode={toggleMode} /> 
-
-      <div className="container my-3">
         <Routes>
-          <Route exact path="/about" element = {<About />} />
-          <Route exact path="/" element= {<FormText heading="Enter the text to Analyze below" mode={mode} />} />
-        </Routes>
-      </div>
+      {/* NavBar components */}
+        <Route exact path ="/" element = {<Navbar title="Text-Util" about="About" mode={mode} toggleMode={toggleMode} />} />
 
+        <div className="container my-3">
+          
+            <Route exact path="/about" element = {<About />} />
+            <Route exact path="/" element= {<FormText heading="Enter the text to Analyze below" mode={mode} />} />
+        </div>
+
+        </Routes>
       </Router>
     </>
   );
